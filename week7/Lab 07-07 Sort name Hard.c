@@ -30,7 +30,7 @@ int main()
     int n;
     scanf("%d", &n);
 
-    char (*list_name)[61] = malloc(n * sizeof(*list_name));
+    char list_name[n][61];
 
     if (list_name == NULL)
         return 1;
@@ -64,8 +64,6 @@ int main()
     {
         printf("%s\n", list_name[i]);
     }
-
-    free(list_name);
 
     return 0;
 }
